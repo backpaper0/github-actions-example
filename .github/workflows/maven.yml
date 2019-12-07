@@ -1,6 +1,13 @@
 name: Java CI
 
-on: [push]
+on:
+  push:
+    paths:
+    - '.mvn/**'
+    - 'mvnw'
+    - 'mvnw.cmd'
+    - 'pom.xml'
+    - 'src/**'
 
 jobs:
   test:
