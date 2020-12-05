@@ -1,0 +1,17 @@
+name: Demo
+
+on:
+  push:
+    branches:
+    - master
+    paths:
+    - '.github/workflows/**'
+    - 'hello.txt'
+
+jobs:
+  hello:
+    name: Hello World
+    runs-on: ubuntu-latest
+    steps:
+    - name: Greeting
+      run: cat hello.txt
