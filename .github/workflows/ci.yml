@@ -16,3 +16,10 @@ jobs:
     - uses: actions/checkout@v2
     - name: Greeting
       run: cat hello.txt
+
+  docker:
+    name: Docker
+    runs-on: ubuntu-latest
+    steps:
+    - name: Docker
+      run: docker --version
