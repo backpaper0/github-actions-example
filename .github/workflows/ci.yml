@@ -25,6 +25,7 @@ jobs:
         echo github.action = ${{ github.action }}
         echo github.action_path = ${{ github.action_path }}
         echo github.actor = ${{ github.actor }}
+        echo github.event_name = ${{ github.event_name }}
 
   docker:
     name: Docker
