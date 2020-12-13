@@ -7,6 +7,9 @@ on:
     paths:
     - '.github/workflows/**'
     - 'hello.txt'
+  pull_request:
+    branches:
+      - master
 
 jobs:
   hello:
@@ -15,7 +18,14 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Greeting
-      run: cat hello.txt
+      run: |
+        cat hello.txt
+        echo github.ref = ${{ github.ref }}
+        echo github.sha = ${{ github.sha }}
+        echo github.action = ${{ github.action }}
+        echo github.action_path = ${{ github.action_path }}
+        echo github.actor = ${{ github.actor }}
+        echo github.event_name = ${{ github.event_name }}
 
   docker:
     name: Docker
