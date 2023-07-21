@@ -1,0 +1,18 @@
+name: git push example
+
+on: [workflow_dispatch]
+
+jobs:
+  git-push:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - run: date > date.txt
+    - run: |
+        git config --local user.email backpaper0@gmail.com
+        git config --local user.name "Uragami Taichi"
+    - run: |
+        git add date.txt
+        git commit -m "Update date.txt"
+        git push
+
