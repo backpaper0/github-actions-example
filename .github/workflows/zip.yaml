@@ -10,7 +10,8 @@ jobs:
     - run: |
         sudo apt-get install -y convmv
         convmv --notest -r -f utf8 -t sjis ./zip-files
-        zip -r example.zip ./zip-files
+        cd zip-files
+        zip -r ../example.zip .
     - uses: actions/upload-artifact@v3
       with:
         name: example.zip
