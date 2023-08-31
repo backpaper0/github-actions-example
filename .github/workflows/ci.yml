@@ -22,6 +22,8 @@ jobs:
       run: |
         cat hello.txt
         echo github.ref = ${{ github.ref }}
+        echo github.ref_name = ${{ github.ref_name }}
+        echo github.ref_type = ${{ github.ref_type }}
         echo github.sha = ${{ github.sha }}
         echo github.action = ${{ github.action }}
         echo github.action_path = ${{ github.action_path }}
