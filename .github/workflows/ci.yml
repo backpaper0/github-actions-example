@@ -31,6 +31,9 @@ jobs:
         echo github.action_path = ${{ github.action_path }}
         echo github.actor = ${{ github.actor }}
         echo github.event_name = ${{ github.event_name }}
+        if "${{ github.event_name }}" = "pull_request"; then
+          echo github.event.number = ${{ github.event.number }}
+        fi
 
   docker:
     name: Docker
