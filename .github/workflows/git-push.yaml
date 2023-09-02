@@ -2,10 +2,8 @@ name: git push example
 
 on:
   push:
-    branches:
-    - master
     paths:
-    - '.github/workflows/git-push.yml'
+    - '.github/workflows/git-push.yaml'
     - 'date.txt'
   workflow_dispatch: {}
 
