@@ -21,7 +21,9 @@ jobs:
         git stash
         git fetch --no-tags --depth=1 origin date
         git checkout date
+        git rm -fr date.txt
+        git commit -m "WIP"
         git stash pop
-        git commit -m "Update date.txt"
+        git commit -m --amend "Update date.txt"
         git push origin date
 
