@@ -18,6 +18,10 @@ jobs:
         git config --local user.name "Uragami Taichi"
     - run: |
         git add date.txt
+        git stash
+        git fetch --no-tags --depth=1 date
+        git checkout date
+        git stash pop
         git commit -m "Update date.txt"
         git push
 
