@@ -1,6 +1,11 @@
 name: git push example
 
-on: [workflow_dispatch]
+on:
+  push:
+    paths:
+    - '.github/workflows/git-push.yml'
+    - 'date.txt'
+  workflow_dispatch: {}
 
 jobs:
   git-push:
