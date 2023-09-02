@@ -24,6 +24,6 @@ jobs:
         git rm -fr date.txt
         git commit -m "WIP"
         git stash pop
-        git commit -m --amend "Update date.txt"
+        git commit --amend -m "Update date.txt"
         git push origin date
 
