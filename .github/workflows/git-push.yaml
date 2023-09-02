@@ -19,9 +19,9 @@ jobs:
     - run: |
         git add date.txt
         git stash
-        git fetch --no-tags --depth=1 date
+        git fetch --no-tags --depth=1 origin date
         git checkout date
         git stash pop
         git commit -m "Update date.txt"
-        git push
+        git push origin date
 
